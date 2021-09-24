@@ -1,0 +1,64 @@
+{
+  "name": "<%= projectName %>",
+  "version": "<%= version %>",
+  "author": "<%= author %>",
+  "description": "<%= description %>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "serve": "vite preview"
+  },
+  "main": "src/main.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonghua2016/aggna-vite-template.git"
+  },
+  "keywords": [
+    "aggna",
+    "aggna-cli",
+    "Vue3.0",
+    "vite",
+    "typescript"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zonghua2016/aggna-vite-template/issues"
+  },
+  "homepage": "https://github.com/zonghua2016/aggna-vite-template#readme",
+  "dependencies": {
+    "@types/vue": "^2.0.0",
+    "await-to-js": "^3.0.0",
+    "axios": "^0.21.1",
+    "element-plus": "^1.0.2-beta.71",
+    "vue": "^3.0.5",
+    "vue-lazyload": "^1.3.3",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^10.3.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.16.0",
+    "less": "^4.1.1",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4",
+    "vite-plugin-compression": "^0.3.3",
+    "vite-plugin-html": "^2.1.0",
+    "vite-plugin-imagemin": "^0.4.5",
+    "vue-eslint-parser": "^7.10.0",
+    "vue-tsc": "^0.2.2"
+  }
+}

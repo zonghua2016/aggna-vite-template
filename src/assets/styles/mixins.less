@@ -1,0 +1,79 @@
+.text-ellipsis() {
+  overflow     : hidden;
+  text-overflow: ellipsis;
+  white-space  : nowrap;
+}
+
+.flex-center {
+  display        : inline-flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.bg(@bgimg, @repeat: no-repeat) {
+  background       : url(@bgimg);
+  background-repeat: @repeat;
+  background-size  : 100% 100%;
+}
+
+
+.text(@fontsize, @color, @fontweight, @lineHeight) {
+  font-size  : @fontsize;
+  color      : @color;
+  font-weight: @fontweight;
+  line-height: @lineHeight;
+}
+
+
+.text-ellipsis(@line-height; @lines: 1) {
+  display           : block;
+  /* Fallback for non-webkit */
+  display           : -webkit-box;
+  max-height        : @line-height*@lines;
+  /* Fallback for non-webkit */
+  line-height       : @line-height;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+  overflow          : hidden;
+  text-overflow     : ellipsis;
+
+  @-moz-document url-prefix() {
+    & {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &:before {
+      bottom     : 0;
+      position   : absolute;
+      right      : 0;
+      float      : right;
+      content    : '\2026';
+      margin-left: -3rem;
+      width      : 3rem;
+    }
+
+    &:after {
+      content : '';
+      position: absolute;
+      height  : 50px;
+      width   : 100%;
+      z-index : 1;
+    }
+  }
+}
+
+.size(@w, @h) {
+  width : @w;
+  height: @h;
+}
+
+.pos(@type, @top, @right, @bottom, @left, @zIndex, @w, @h) {
+  position: @type;
+  top     : @top;
+  right   : @right;
+  bottom  : @bottom;
+  left    : @left;
+  z-index : @zIndex;
+  .size(@w, @h);
+}
